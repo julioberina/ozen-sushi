@@ -18,11 +18,13 @@ class App extends Component {
                 <ul>
                   {
                     menu[category].map(item => {
+                      item.name = item.name.replace(/\d+\.\s/, '')
+
                       return (
                         <span>
-                          <li key={k++}>{item.name}</li>
-                          <li key={k++}>{item.description}</li>
-                          <li key={k++}>{item.price}</li>
+                          <li key={k++}>Name: {item.name}</li>
+                          <li key={k++}>Description: {item.description}</li>
+                          <li key={k++}>Price: {item.price}</li>
                           <br />
                         </span>
                       )
